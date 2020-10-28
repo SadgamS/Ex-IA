@@ -47,7 +47,7 @@ X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 
 # Creamos el arbol de decision con una altura maxima de nodos igual a 4 y lo clasifica de la mejor manera posible
 # y usa el critero de entriopia para medir la calidad 
-arbolDec = DecisionTreeClassifier(max_depth=4,random_state=0, criterion='entropy')
+arbolDec = DecisionTreeClassifier(max_leaf_nodes=4,random_state=0, criterion='entropy')
 
 # Construimos el arbol con los valores de entrenamiento
 arbolDec = arbolDec.fit(X_train,y_train)
